@@ -1,0 +1,45 @@
+package com.example.myapplication2_2_1;
+
+import java.util.Scanner;
+
+public class eg221 {
+    // 类方法: 🌟integer和boolean类型参数为传值🌟
+    static void funcA(int c, boolean b) {
+        c++;
+        b = false;
+        System.out.println("在funcA为 :"+c+"-"+b);
+    }
+    // 类方法: 数组与字符串对象参数为传址
+    static void funcB(int temp[], String a) {
+        temp[1] = 150;
+        a = "江小鱼";
+        System.out.println("在funcB为 : "+temp[1]+"-"+a);
+    }
+    // 主程序
+    public static void main(String[] args) {
+        // 变量声明
+        int c = 1;               // 数字
+        boolean b = true;        // 布尔
+        String str = "张无忌";   // 字符串
+        int arr[] = { 1, 2, 3 }; // 数组
+        System.out.println("调用funcA前: "+c+"-"+b);
+        // 调用类方法
+        funcA(c, b);
+        System.out.println("调用funcA后: "+c+"-"+b);
+        System.out.println("调用funcB前: "+arr[1]+"-"+str);
+        // 调用类方法
+        funcB(arr, str);
+        System.out.println("调用funcB后: "+arr[1]+"-"+str);
+    }
+
+}
+
+**************************************************************************************
+
+在funcA为 :2-false
+调用funcA后: 1-true
+调用funcB前: 2-张无忌
+在funcB为 : 150-江小鱼
+调用funcB后: 150-张无忌
+
+进程已结束，退出代码为 0
