@@ -1,0 +1,32 @@
+ public class Ch5_2_3 {
+    static double convertTemp(double c) {
+       return (9.0 * c) / 5.0 + 32.0;
+       /*double f;
+        f=(9.0 * c) / 5.0 + 32.0;
+        return f;*/
+    }
+    // 类方法: 计算N到N的数字总和
+   static int sumN2N(int start, int end) {
+       int i, sum = 0;  // 变量声明
+       // for循环语句
+       for ( i = start; i <= end; i++ )
+          sum += i;
+       return sum;
+    }
+    // 主程序
+    public static void main(String[] args) {
+       java.util.Scanner sc = // 建立Scanner对象
+                 new java.util.Scanner(System.in);
+       System.out.print("请输入摄氏温度=> ");
+       double c = sc.nextDouble(); // 取得温度
+       System.out.print("请输入开始值=> ");
+       int s = sc.nextInt(); // 取得开始值
+       System.out.print("请输入结束值=> ");
+       int e = sc.nextInt(); // 取得结束值
+       // 类方法的调用
+       int total = sumN2N(s, e); 
+       System.out.println(s+"加到"+e+"的总和:"+total);
+       double f = convertTemp(c);
+       System.out.println(c + "度C=" + f + "度F");
+    }
+ }
