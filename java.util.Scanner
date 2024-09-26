@@ -1,0 +1,8 @@
+import java.util.Scanner;
+
+Scanner sc = // 建立Scanner对象
+                new Scanner(System.in);
+
+***************************************************************************************
+java.util.Scanner sc = // 建立Scanner对象
+                new java.util.Scanner(System.in);
