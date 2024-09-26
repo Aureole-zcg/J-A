@@ -1,0 +1,37 @@
+package com.example.myapplication2_2_1;
+
+import java.util.Scanner;
+
+public class eg221 {
+    //主程序
+
+        // 类方法: 显示星号三角形
+        private static void printTriangle() {
+            int i,j;
+            // for嵌套循环
+            for ( i = 5; i >= 1; i-- ) {
+                for ( j = 1; j <= i; j++ )
+                    System.out.print("*");
+                System.out.print("\n");
+            }
+        }
+        // 类方法: 计算1加到5的总和
+        public static void sumOne2Five(int i) {
+            int sum = 0;  // 变量声明
+            // for循环语句
+            for ( i = 1; i <= 5; i++ ) {
+                System.out.print("|" + i);
+                sum += i;
+            }
+            System.out.println("\n总和: " + sum);
+        }
+        // 主程序
+        public static void main(String[] args) {
+            // 类方法的调用
+            printTriangle();
+            // 另一种类方法的调用
+            eg221.sumOne2Five(1);
+        }
+
+}
+
