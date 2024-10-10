@@ -9,7 +9,7 @@ public class eg221 {
         b = false;
         System.out.println("在funcA为 :"+c+"-"+b);
     }
-    // 类方法: 数组与字符串对象参数为传址
+    // 类方法: 数组对象参数方式为传址，不论是否使用NEW运算字来创建字符串对象都是传值，因为字符串对象并不能更改字符串内容
     static void funcB(int temp[], String a) {
         temp[1] = 150;
         a = "江小鱼";
