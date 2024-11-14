@@ -5,4 +5,4 @@ VS Code配置Java环境
 4.系统变量PATH->编辑 新建 %JAVA_HOME%\bin
 5.系统变量新建->变量CLASSPATH 值.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
 6.命令提示符输入java和javac验证环境
-7.打开VS Code安装插件
+7.打开VS Code安装插件Language Support of Java和Extension Pack for Java
