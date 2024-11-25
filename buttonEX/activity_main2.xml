@@ -21,17 +21,17 @@
             android:text="华氏度" />
     </TableRow>
 
-    <TableRow android:layout_height="150dp">
+    <TableRow>
 
         <EditText
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:inputType="number" />
 
-        <Button
+        <Button android:text="转换"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="转换" />
+            android:layout_height="wrap_content"/>
+
 
         <EditText
             android:layout_width="100dp"
