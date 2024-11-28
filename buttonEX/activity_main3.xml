@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="摄氏度" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="==>" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="华氏度" />
+    </TableRow>
+
+    <TableRow>
+
+        <EditText android:id="@+id/txtC"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+        <Button android:id="@+id/button"
+            android:text="转换"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="button_Click"/>
+
+        <EditText android:id="@+id/txtF"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </TableRow>
+</TableLayout>
