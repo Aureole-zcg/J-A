@@ -2,11 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">  <!-- 添加 16dp 的内边距，使内容不紧贴边缘 -->
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">  <!-- 确保内容垂直居中对齐 -->
+        <!-- "horizontal"子元素水平排列 -->
 
         <TextView
             android:layout_width="wrap_content"
@@ -16,7 +20,7 @@
         <EditText android:id="@+id/txtOpd1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"/>
     </LinearLayout>
     <RadioGroup android:id="@+id/rdgOp"
         android:layout_width="fill_parent"
@@ -52,7 +56,7 @@
         <EditText android:id="@+id/txtOpd2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"/>
     </LinearLayout>
 
     <CheckBox
@@ -74,12 +78,14 @@
 
     <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:padding="43dp">  <!-- 添加 16dp 的内边距，使内容不紧贴边缘 -->
         <TableRow>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="摄氏度" />
 
             <TextView
@@ -93,20 +99,23 @@
                 android:text="华氏度" />
         </TableRow>
 
-        <TableRow>
+        <TableRow android:layout_height="wrap_content">
 
-            <EditText android:id="@+id/txtC"
+            <EditText
+                android:id="@+id/txtC"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
 
-            <Button android:id="@+id/button"
+            <Button
+                android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="button_Click"
-                android:text="转换"/>
+                android:text="转换" />
 
-            <EditText android:id="@+id/txtF"
+            <EditText
+                android:id="@+id/txtF"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
