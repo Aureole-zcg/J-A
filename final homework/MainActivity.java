@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener btn1Listener = new View.OnClickListener() {
         public void onClick(View v) {
             //声明两个整型变量用于存储操作数
-            int opd1, opd2;
+            double opd1, opd2;
             //声明一个双精度浮点型变量用于存储运算结果，并初始化为0.0
             double result = 0.0;
             //声明EditText类型的变量用于获取用户输入的操作数
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
             txtOpd1 = (EditText) findViewById(R.id.txtOpd1);
             txtOpd2 = (EditText) findViewById(R.id.txtOpd2);
             //取得输入值
-            opd1 = Integer.parseInt(txtOpd1.getText().toString());
-            opd2 = Integer.parseInt(txtOpd2.getText().toString());
+            opd1 = Double.parseDouble(txtOpd1.getText().toString());
+            opd2 = Double.parseDouble(txtOpd2.getText().toString());
             //取得选取的运算符
             rdbAdd = (RadioButton) findViewById(R.id.rdbAdd);
             if (rdbAdd.isChecked()) {
@@ -73,9 +73,14 @@ public class MainActivity extends AppCompatActivity {
             chkDivide = (CheckBox) findViewById(R.id.chkDivide);
             if (rdbDivide.isChecked()) {
                 if (chkDivide.isChecked())
-                    result = opd1 / opd2;  //除
+                {
+
+                    int opd3= (int) opd1;
+                    int opd4= (int) opd2;
+                    result = opd3 / opd4 ;  //整除
+                }
                 else
-                    result = opd1 / (double) opd2;
+                    result = opd1 /  opd2;//除
             }
             output.setText("计算结果 = " + result);
         }
