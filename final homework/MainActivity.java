@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
 //        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);//设置Activity使用的布局资源文件
 
-        // 取得Button控件
+        //取得Button控件
         Button btn1 = (Button) findViewById(R.id.button1);
-        // 注册Button的监听器
+        //注册Button的监听器
         btn1.setOnClickListener(btn1Listener);
-        // 取得TextView控件
+        //取得TextView控件
         output = (TextView) findViewById(R.id.lblOutput);
 
 
@@ -40,36 +40,40 @@ public class MainActivity extends AppCompatActivity {
     }
     View.OnClickListener btn1Listener = new View.OnClickListener() {
         public void onClick(View v) {
+            //声明两个整型变量用于存储操作数
             int opd1, opd2;
+            //声明一个双精度浮点型变量用于存储运算结果，并初始化为0.0
             double result = 0.0;
+            //声明EditText类型的变量用于获取用户输入的操作数
             EditText txtOpd1, txtOpd2;
-            RadioButton rdbAdd, rdbSubtract,
-                    rdbMultiply, rdbDivide;
+            //声明RadioButton类型的变量用于获取用户选择的运算符
+            RadioButton rdbAdd, rdbSubtract,rdbMultiply, rdbDivide;
+            //如是否进行整数除法
             CheckBox chkDivide;
-            // 取得EditText控件
+            //取得EditText控件
             txtOpd1 = (EditText) findViewById(R.id.txtOpd1);
             txtOpd2 = (EditText) findViewById(R.id.txtOpd2);
-            // 取得输入值
+            //取得输入值
             opd1 = Integer.parseInt(txtOpd1.getText().toString());
             opd2 = Integer.parseInt(txtOpd2.getText().toString());
-            // 取得选取的运算符
+            //取得选取的运算符
             rdbAdd = (RadioButton) findViewById(R.id.rdbAdd);
             if (rdbAdd.isChecked()) {
-                result = opd1 + opd2; // 加
+                result = opd1 + opd2; //加
             }
             rdbSubtract = (RadioButton) findViewById(R.id.rdbSubtract);
             if (rdbSubtract.isChecked()) {
-                result = opd1 - opd2;  // 减
+                result = opd1 - opd2;  //减
             }
             rdbMultiply = (RadioButton) findViewById(R.id.rdbMultiply);
             if (rdbMultiply.isChecked()) {
-                result = opd1 * opd2;  // 乘
+                result = opd1 * opd2;  //乘
             }
             rdbDivide = (RadioButton) findViewById(R.id.rdbDivide);
             chkDivide = (CheckBox) findViewById(R.id.chkDivide);
             if (rdbDivide.isChecked()) {
                 if (chkDivide.isChecked())
-                    result = opd1 / opd2;  // 除
+                    result = opd1 / opd2;  //除
                 else
                     result = opd1 / (double) opd2;
             }
