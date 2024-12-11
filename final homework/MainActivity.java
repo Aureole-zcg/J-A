@@ -79,11 +79,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void button_Click(View view)
     {
+        // 声明两个 double 类型的变量 c 和 f，用于存储摄氏度和华氏度值
         double c,f;
-        //取得EditText控件
+        //取得EditText控件,并将其赋值给相应的text变量
         EditText txtC=(EditText) findViewById(R.id.txtC);
         EditText txtF=(EditText) findViewById(R.id.txtF);
         //取得输入式
+        // 从 txtC 控件中获取文本内容，转换为字符串后解析为 double 类型，存入变量 c
         c=Double.parseDouble(txtC.getText().toString());
         //摄氏度换算华氏度公式
         f=(9.0*c)/5.0+32.0;
